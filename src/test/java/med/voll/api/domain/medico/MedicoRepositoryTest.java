@@ -22,9 +22,9 @@ import java.time.temporal.TemporalAdjusters;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
-@DataJpaTest
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-@ActiveProfiles("test")
+@DataJpaTest //utilizada para testar uma interface Repository
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)//Nao substituir a config do bd
+@ActiveProfiles("test")// vai pegar as outras configs do test.properties
 class MedicoRepositoryTest {
 
     @Autowired
